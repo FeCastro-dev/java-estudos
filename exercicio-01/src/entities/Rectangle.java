@@ -9,5 +9,7 @@ public class Rectangle {
     double perimeter () {
         return 2 * (width + height);
     }
-    double diagonal;
+    double diagonal () {
+        return Math.sqrt((width * width) + (height * height));
+    }
 }
