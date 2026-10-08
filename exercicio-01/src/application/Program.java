@@ -1,7 +1,7 @@
 package application;
 
-import java.util.Scanner;
 import entities.Rectangle;
+import java.util.Scanner;
 
 public class Program {
     public static void main (String args []) {
@@ -16,10 +16,10 @@ public class Program {
         rectangle.height = sc.nextDouble();
         System.out.println("ALTURA: " + rectangle.height);
 
-        System.out.println("AREA: " + rectangle.area());
+        System.out.printf("AREA: %.2f%n", rectangle.area());
 
-        System.out.println("DIAGONAL: " + rectangle.diagonal());
-        System.out.println("PERIMETRO: " + rectangle.perimeter());
+        System.out.printf("DIAGONAL: %.2f%n", rectangle.diagonal());
+        System.out.printf("PERIMETRO: %.2f%n", rectangle.perimeter());
 
         sc.close();
     }
