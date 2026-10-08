@@ -1,15 +1,17 @@
+package entities;
+
 public class Rectangle {
     
-    double width;
-    double height;
+    public double width;
+    public double height;
 
-    double area () {
+    public double area () {
         return width * height;
     }
-    double perimeter () {
+    public double perimeter () {
         return 2 * (width + height);
     }
-    double diagonal () {
+    public double diagonal () {
         return Math.sqrt((width * width) + (height * height));
     }
 }
