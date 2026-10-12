@@ -2,9 +2,9 @@ package entities;
 
 public class Employee {
     
-    String nome;
-    double salario_bruto;
-    double imposto;
+    public String nome;
+    public double salario_bruto;
+    public double imposto;
 
     public double netSalary() {
         
@@ -15,7 +15,8 @@ public class Employee {
 
     public void increaseSalary(double percentage) {
 
-        double aumentoSalario =  * (salario_bruto / 100);
-    }
+        double aumentoSalario =  percentage * (salario_bruto / 100);
+        salario_bruto = salario_bruto + aumentoSalario;
+    }   
 
 }
