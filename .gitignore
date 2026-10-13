@@ -1,0 +1,9 @@
+# Configurações das IDEs
+.idea/
+.vscode/
+*.iml
+
+# Arquivos gerados pela compilação Java
+*.class
+bin/
+target/
