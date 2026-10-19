@@ -22,30 +22,50 @@ public class Program {
         String answer = sc.next();
         if (answer.equals("y")) {
             System.out.println("Enter initial deposit value: ");
+            double deposito = sc.nextDouble();
+        
+            double saldo = 0 + deposito;        
+            System.out.println(saldo);
+            
+            ContaBancaria cb = new ContaBancaria(numeroConta, nomeTitular, saldo);
+
+            System.out.println("Account data:");
+            System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + saldo);
+
+            System.out.print("Enter a deposit value: ");
+            cb.deposito = sc.nextDouble();
+            
+            System.out.println("Updated account data: ");
+            System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + cb.aumentarSaldo(cb.deposito));
+
+            System.out.print("Enter a withdraw value: ");
+            cb.saque = sc.nextDouble();
+
+            System.out.println("Updated account data: ");
+            System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + cb.diminuirSaldo(cb.saque));
+        } else {
+            System.out.println("Account data:");
+            System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ 0.00");
+            sc.nextLine();
+            System.out.print("Enter a deposit value: ");
+            double deposito = sc.nextDouble();
+        
+            double saldo = 0 + deposito;        
+            System.out.println(saldo);
+            
+            ContaBancaria cb = new ContaBancaria(numeroConta, nomeTitular, saldo);
+
+            System.out.println("Account data:");
+            System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + saldo);
+
+            System.out.print("Enter a withdraw value: ");
+            cb.saque = sc.nextDouble();
+
+            System.out.println("Updated account data: ");
+            System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + cb.diminuirSaldo(cb.saque));
+
         }
         
-        double deposito = sc.nextDouble();
-        
-        double saldo = 0 + deposito;        
-        System.out.println(saldo);
-        
-        ContaBancaria cb = new ContaBancaria(numeroConta, nomeTitular, saldo);
-
-        System.out.println("Account data:");
-        System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + saldo);
-
-        System.out.print("Enter a deposit value: ");
-        cb.deposito = sc.nextDouble();
-        
-        System.out.println("Updated account data: ");
-        System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + cb.aumentarSaldo(cb.deposito));
-
-        System.out.print("Enter a withdraw value: ");
-        cb.saque = sc.nextDouble();
-
-        System.out.println("Updated account data: ");
-        System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + cb.diminuirSaldo(cb.saque));
-
         sc.close();
     }
 }
