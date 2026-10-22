@@ -20,7 +20,11 @@ public class Program {
             vect[i] = sc.nextDouble();
             if (vect[i] > numeroMaior) {
                 numeroMaior = vect[i];  
-            } else if (vect[i] > i) {
+            }     
+        }
+
+        for (int i=0; i<n; i++) {
+            if (vect[i] > i) {
                 posicao = i;
             }    
         }
