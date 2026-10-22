@@ -27,6 +27,7 @@ public class Program {
         
         for (int i=0;i<quantidade; i++) {
             if (idades[i] > idade) {
+                idade = idades[i];
                 nome = nomes[i];
             }
         }
