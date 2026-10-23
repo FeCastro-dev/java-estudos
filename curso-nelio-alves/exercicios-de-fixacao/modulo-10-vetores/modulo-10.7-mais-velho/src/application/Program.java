@@ -18,7 +18,7 @@ public class Program {
         int idades[] = new int[quantidade];
         
         for (int i=0; i<quantidade; i++) {
-            System.out.println("Dados da " + n++ + "a pessoa: " );
+            System.out.println("Dados da " + (i+1) + "a pessoa: ");
             System.out.print("Nome: ");
             nomes[i] = sc.next();
             System.out.print("Idade: ");
