@@ -15,7 +15,7 @@ public class Pensionato {
         return room;
     }
 
-    public void getRoom(int room) {
+    public void setRoom(int room) {
         this.room = room;
     }
 
