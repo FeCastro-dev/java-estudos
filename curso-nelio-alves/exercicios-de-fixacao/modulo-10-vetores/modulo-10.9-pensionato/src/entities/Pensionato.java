@@ -5,9 +5,35 @@ public class Pensionato {
     private String name;
     private String email;
 
-    public Pensionato(int room) {
+    public Pensionato(int room, String name, String email) {
+        this.room = room;
+        this.name = name;
+        this.email = email;
+    }
+    
+    public int getRoom() {
+        return room;
+    }
+
+    public void getRoom(int room) {
         this.room = room;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
 
 }
