@@ -17,7 +17,7 @@ public class Program {
         Pensionato[] vect = new Pensionato[10];
         
 
-        for (int i=0; i<vect.length; i++) {
+        for (int i=0; i<n; i++) {
             System.out.println("Rent #" + (i + 1) + ":");
             sc.nextLine();
             System.out.print("Name: ");
@@ -29,10 +29,13 @@ public class Program {
             vect[room] = new Pensionato(room, name, email);
         }
         
-        /*System.out.print("Busy rooms: ");
+        
+        System.out.println("Busy rooms: ");
         for (int i=0; i<vect.length; i++) {
-            System.out.print(vect);
-        }*/
+            if(vect[i] != null) {
+                System.out.println(vect[i].getRoom() + ": " + vect[i].getName() + ", " + vect[i].getEmail());
+            }
+        }
         
         sc.close();
     }
