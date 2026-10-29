@@ -1,8 +1,8 @@
 package application;
 
+import entities.Employee;
 import java.util.Locale;
 import java.util.Scanner;
-import entities.Employee;
 
 public class Program {
     public static void main(String[] args) {
@@ -13,17 +13,18 @@ public class Program {
         System.out.print("How many employees will be registered? ");
         int n = sc.nextInt();
 
-        Employee ep = new Employee();
+        
+        Employee[] vect = new Employee[n];
 
         for (int i=0; i<n; i++) {
             System.out.println("Employee #" + (i + 1) + ":");
             System.out.print("Id: " );
-            id = sc.nextInt();
+            int id = sc.nextInt();
             System.out.print("Name: ");
             sc.nextLine();
-            name = sc.nextLine();
+            String name = sc.nextLine();
             System.out.println("Salary: ");
-            salary = sc.nextDouble();
+            double salary = sc.nextDouble();
         }
 
         sc.close();
