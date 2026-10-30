@@ -5,10 +5,16 @@ public class Employee {
     private String name;
     private double salary;
 
+    public double percentage = 0.0;
+    
     public Employee(int id, String name, double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+    }
+
+    public double increase() {
+        return percentage = percentage * (salary / 100);  
     }
 
     public int getId() {
