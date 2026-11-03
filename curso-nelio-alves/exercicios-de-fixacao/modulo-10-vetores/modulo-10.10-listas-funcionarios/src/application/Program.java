@@ -14,7 +14,7 @@ public class Program {
         int n = sc.nextInt();
         System.out.println();
         
-        int id;
+        int id = 0;
         String name;
         double salary;
         double percentage = 0.0;
@@ -34,21 +34,33 @@ public class Program {
             vect[i] = new Employee(id, name, salary);
         }
         
-        int increaseId;
+        int increaseId = 0;
+        boolean find = false;
         
         System.out.print("Enter the employee id that will have salary increase: ");
         increaseId = sc.nextInt();
-
-        System.out.print("Enter the percentage: ");
-        percentage = sc.nextDouble();
-        System.out.println();
         
+        for (int i = 0; i<vect.length; i++) {
+            if (increaseId == vect[i].getId()) {
+                System.out.print("Enter the percentage: ");
+                percentage = sc.nextDouble();
+                System.out.println();
+                find = true;
+                break;
+            }
+        }
+
+        if (find == false) {
+            System.out.println("This id does not exist!");
+            System.out.println();
+        }
 
         System.out.println("List of employees: ");
         
         for (int i=0; i<vect.length; i++) {
+            vect[i].percentage = percentage;
             if (vect[i].getId() == increaseId) {
-                vect[i].setSalary(vect[i].increase() );
+                vect[i].setSalary(vect[i].increase() + vect[i].getSalary());
             }    
             System.out.println(vect[i].getId() + ", " + vect[i].getName() + ", " + vect[i].getSalary());
         }

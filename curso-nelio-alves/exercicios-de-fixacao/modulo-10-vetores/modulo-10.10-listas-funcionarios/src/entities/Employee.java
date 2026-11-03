@@ -5,7 +5,7 @@ public class Employee {
     private String name;
     private double salary;
 
-    public double percentage = 0.0;
+    public double percentage;
     
     public Employee(int id, String name, double salary) {
         this.id = id;
@@ -14,7 +14,8 @@ public class Employee {
     }
 
     public double increase() {
-        return percentage = percentage * (salary / 100);  
+        
+        return (this.salary / 100) * percentage;
     }
 
     public int getId() {
