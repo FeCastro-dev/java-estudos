@@ -33,7 +33,21 @@ public class Program {
                     if (mat[i][j] == x) {
                         left = mat[i][j-1];
                         
+                        if (i > j) {
+                            right = mat[i][j+1];
+                        }
+                        
+                        if (i > 0) {
+                            up = mat[i-1][j];
+                        } 
+                        down = mat[i+1][j];
+
+                        
+                        
                         System.out.println("Left: " + left);
+                        System.out.println("Right: " + right);
+                        System.out.println("Up: " + up);
+                        System.out.println("Down: " + down);
                         
 
                     }
